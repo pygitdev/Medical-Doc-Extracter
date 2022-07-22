@@ -10,7 +10,7 @@ class Extract:
         self.pdf_path = fr"{file_path}"
         self.file_format = fr"{file_format}"
         self.poppler_path = r"D:\TOOLS\poppler-22.04.0\Library\bin"
-        self.tesseract_path = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        self.tesseract_path = r"D:\TOOLS\Tesseract-OCR\tesseract.exe"
         self.text = self.extract()
 
     def extract(self):
