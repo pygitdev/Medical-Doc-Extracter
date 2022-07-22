@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from pdf2image import convert_from_path
-from backend.src import parser_prescription,parser_patient_details
+from backend.src import parser_prescription, parser_patient_details
 import pytesseract
 
 
@@ -20,7 +20,7 @@ class Extract:
         """
         extracted_text = ""
         pages = convert_from_path(pdf_path=self.pdf_path, poppler_path=self.poppler_path)
-        if len(pages)>0:
+        if len(pages) > 0:
             page = pages[0]
             img = preprocess_image(page)
             pytesseract.pytesseract.tesseract_cmd = self.tesseract_path
@@ -52,6 +52,3 @@ def preprocess_image(img):
         11
     )
     return processed_image
-
-
-
